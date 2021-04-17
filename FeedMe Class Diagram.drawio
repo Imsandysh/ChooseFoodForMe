@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-04-17T05:13:20.248Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36" etag="wYDDVe615SZH-3ZohDZD" version="14.4.4" type="github" pages="2">
-  <diagram id="TetxVeqAev78qztmmzDk" name="APP">
-    <mxGraphModel dx="1715" dy="507" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+<mxfile host="app.diagrams.net" modified="2021-04-17T05:15:04.753Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36" etag="DReeuBpk4aFiihqQKd1R" version="14.4.4" type="github" pages="2">
+  <diagram id="TetxVeqAev78qztmmzDk" name="Frontend">
+    <mxGraphModel dx="2926" dy="1216" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -325,6 +325,9 @@
         </mxCell>
         <mxCell id="AEnVumFd9ubIAorNIs_c-1" value="Note:Not needed if this is server side" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="690" y="730" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="3Hi9ChmAKJbLM4Am_R_g-2" value="Note: May possibly be replaced with html" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="380" y="540" width="80" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
