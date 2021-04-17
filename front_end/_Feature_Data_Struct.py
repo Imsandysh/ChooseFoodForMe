@@ -4,12 +4,25 @@ import concurrent.futures
 
 class Feature_Data_Struct(Saveable):
     list_features = []
+    feature_count = 0
     
-    def __init__(self,list_features):
+    def __init__(self,list_features= []):
         super(Feature_Data_Struct,self).__init__(file_location="",indent = 4,sort_keys=True)
         self.list_features = list_features
+        self.feature_count = len(self.list_features)
+    def get_feature_count(self):
+        return self.feature_count
+    def add_feature(self,feat):
+        list_features.append(feat)
+        self.feature_count = len(self.list_features)
+        
+    def rm_feature(self,feat):
+        list_features.remove(feat)
+        self.feature_count = len(self.list_features)
+        
     def Get_Feat_idx(self,idx):
         return self.list_features[idx]
+        
     def __eq__(self,other):
         return self.calc_diff(other) == 0
        
@@ -36,6 +49,6 @@ class Feature_Data_Struct(Saveable):
         out = "\n"
         for i in self.list_features:
             out = out +"|" + str(i) +"|\n"
-        return out
+        return out + "feature_count " + str( self.feature_count)
 
         
