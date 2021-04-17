@@ -8,21 +8,26 @@ class Feature_Data_Struct(Saveable):
     def __init__(self,list_features):
         super(Feature_Data_Struct,self).__init__(file_location="",indent = 4,sort_keys=True)
         self.list_features = list_features
-    
+    def Get_Feat_idx(self,idx):
+        return self.list_features[idx]
     def __eq__(self,other):
-        return calc_diff(other) == 0
+        return self.calc_diff(other) == 0
        
                 
     def calc_diff(self,other):
+        self.sort()
+        other.sort()
         found = []
-        for feat_other in other.list_features:
+        for i in range(0,len(self.list_features),1):
             with concurrent.futures.ThreadPoolExecutor() as executor:
-                future = executor.submit(self.check_for,feat_other)
+                print(other.Get_Feat_idx(i))
+                future = executor.submit(self.check_for,other.Get_Feat_idx(i),self.Get_Feat_idx(i))
                 found.append(future.result())
-        return sum(found)
+        print(sum(found))
+        return sum(found)-len(self.list_features)
         
-    def check_for(self,feat):
-        return feat in self.list_features
+    def check_for(self,feat1,feat2):
+        return  feat1 == feat2
         
     def sort(self):
         self.list_features.sort()
