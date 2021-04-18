@@ -10,8 +10,8 @@ A web application that recommends you food from the menu
 6. pandas, numpy, sk learn, etc (check code)
 
 # Installation of Teserract
-Install tesserract from https://github.com/UB-Mannheim/tesseract/wiki  (executable)
-pip install teserract
+1. Install tesserract from https://github.com/UB-Mannheim/tesseract/wiki  (executable)
+2. pip install teserract
 
 # Components
 1. Front end: User Interface designed using Flask that takes input/preferences of user
