@@ -10,8 +10,10 @@ class Feature_Data_Struct(Saveable):
         super(Feature_Data_Struct,self).__init__(file_location="",indent = 4,sort_keys=True)
         self.list_features = list_features
         self.feature_count = len(self.list_features)
+        
     def get_feature_count(self):
         return self.feature_count
+
     def add_feature(self,feat):
         list_features.append(feat)
         self.feature_count = len(self.list_features)
@@ -26,7 +28,7 @@ class Feature_Data_Struct(Saveable):
     def __eq__(self,other):
         return self.calc_diff(other) == 0
     
-    def __ls__(self,other):
+    #def __ls__(self,other):
         
                 
     def calc_diff(self,other):

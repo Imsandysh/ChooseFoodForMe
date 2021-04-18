@@ -1,9 +1,13 @@
+
+
 class Feature():
     name = None
     value = None
     weight = None
     def __init__(self,name = None,value=None,weight=None):
-        self.Modify(name,name,weight)
+        self.name = name
+        self.value = value
+        self.weight = weight
         
     def Modify(self,name,value,weight):
         self.name = name
