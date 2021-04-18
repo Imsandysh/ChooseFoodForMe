@@ -4,6 +4,7 @@ from _Feature_Data_Struct import Feature_Data_Struct
 from _Quiz import Quiz
 from _Question import Question
 from _Profile_Features import Profile_Features
+from _Profile import Profile
 
 
 s = Saveable(file_location="bob")
@@ -55,6 +56,10 @@ print("quiz \n" , quiz_1)
 ##profile features
 pf = Profile_Features(list_features = ls_f,quiz =quiz_1) 
 print("profile" , pf)
+
+##profile
+user_1 = Profile("ji@Bmail.com","password",pf,user_ID= None)
+print(user_1.get_data())
 
 
 
