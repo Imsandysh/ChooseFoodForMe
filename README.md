@@ -14,4 +14,7 @@ Install tesserract from https://github.com/UB-Mannheim/tesseract/wiki  (executab
 pip install teserract
 
 # Components
-**1. Front End: ** 
+1. Front end: User Interface designed using Flask that takes input/preferences of user
+2. Back end: Menu is scanned to get the list of food in there. Based on prefences and similarity with other food users have liked, new food is recommended from the menu.
+
+
