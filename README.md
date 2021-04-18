@@ -12,3 +12,6 @@ A web application that recommends you food from the menu
 # Installation of Teserract
 Install tesserract from https://github.com/UB-Mannheim/tesseract/wiki  (executable)
 pip install teserract
+
+# Components
+**1. Front End: ** 
