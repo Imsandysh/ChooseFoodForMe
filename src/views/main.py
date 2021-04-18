@@ -5,7 +5,6 @@ from werkzeug.utils import secure_filename
 from . import db, create_app
 
 main = Blueprint('main', __name__)
-app = create_app()
 
 @main.route('/')
 def index():
@@ -16,22 +15,37 @@ def index():
 def profile():
     return render_template('profile.html', name=current_user.name)
 
-@main.route('/upload_image')
+
+def allowed_image(filename):
+
+    if not "." in filename:
+        return False
+
+    ext = filename.rsplit(".", 1)[1]
+
+    return ext in app.config['UPLOAD_EXTENSIONS']
+
+@main.route('/upload_image', methods=['GET', 'POST'])
 @login_required
-def upload():
+def upload_image():
+
+    if request.method == 'POST':
+        if request.files:
+            image = request.files['file']
+            
+            if image.filename == '':
+                return redirect(request.url)
+
+            if allowed_image(image.filename):
+                print (image.filename)
+                filename = secure_filename(image.filename)
+                return redirect(request.url)
+        else:
+            print ("No image found")
+
     return render_template('upload_image.html')
 
-@main.route('/upload_image', methods=['POST'])
+@main.route('/choice')
 @login_required
-def upload_image():    
-    uploaded_image = request.files['file']
-    print (uploaded_image)
-    filename = secure_filename(upload_image.filename)
-    print (filename)
-    if filename != '':
-        file_ext = os.path.splitext(filename)[1]
-        if file_ext not in app.config['UPLOAD_EXTENSIONS']:
-            abort(400)
-        # uploaded_image.save(os.path.join(app.config['UPLOAD_PATH'], filename))
-    
-    return redirect(url_for('upload'))
+def choice():
+    return render_template('choice.html')

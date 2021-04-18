@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  A few questions before dinner
+</h1>
+<div class="tile is-ancestor">
+    <div class="tile is-parent is-vertical">
+      <article class="tile is-child notification is-danger">
+        <p class="title">Would you like to try something new?</p>
+        <div class="content">
+            <button class="button is-primary">Something New!</button>
+            <button class="button is-warning">I'd like my regulars</button>
+        </div>
+      </article>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child notification is-danger">
+        <p class="title">Carbs</p>
+        <div class="content">
+            <button class="button is-dark">Rice</button>
+            <button class="button is-dark">Potato</button>
+            <button class="button is-dark">Bread</button>
+            <button class="button is-dark">Corn</button>
+        </div>
+      </article>
+    </div>
+</div>
+
+{% endblock %}
