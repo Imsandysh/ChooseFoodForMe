@@ -23,6 +23,9 @@ class Ingrediant_Vector(Feature):
     def get_vector(self):
         return self.vector
         
+    def set_idx(self,idx,val):
+        self.vector[:,idx] = val
+        
     def __str__(self):
         return str(self.get_vector()) + " " + self.name
     

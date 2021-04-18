@@ -14,6 +14,9 @@ class Quiz ():
         self.quiz_ls.append(self,quest)
         self.quiz_count = len(self.quiz_ls)
         
+    def get_quiz_ls(self):
+        return self.quiz_ls
+        
     def remove_question(self,quest):
         self.quiz_ls.remove(quest)
         self.quiz_count = len(self.quiz_ls)

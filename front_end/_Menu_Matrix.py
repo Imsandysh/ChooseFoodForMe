@@ -20,11 +20,13 @@ class Menu_Matrix(Feature_Data_Struct):
             self.menu = np.concatenate((self.menu,self.list_features[i].get_vector()))
             #self.menu = np.append([self.menu],[i.get_vector()])
     
+    
+        
     def angle_similarity_vect(self,other):
         other = other
         #return np.dot(self.menu,other)/(norm(self.menu)*norm(other.T))
         cosine_similarity = linear_kernel(self.get_menu(),other)
-        print(cosine_similarity)
+        #print(cosine_similarity)
         return cosine_similarity
         
     def get_close_recomendation(self,other):
