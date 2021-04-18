@@ -1,6 +1,6 @@
 from _Ingrediant_Vector import Ingrediant_Vector
 from _Menu_Matrix import Menu_Matrix
-
+from _Profile import Profile
         #chicken,beef,cheese
 ls_pref= [0,1,1]
 ls_chicken_curry = [1,0,0]
@@ -25,6 +25,13 @@ print (restraunt_1.angle_similarity_vect(profile.get_vector()))
 
 print ("closest(1st occurance)",restraunt_1.get_close_recomendation(profile))
 print ("farthest(1st occurance)",restraunt_1.get_far_recomendation(profile))
+
+jordan = Profile("ji@Bmail.com","password",profile,user_ID= None)
+
+print (jordan.user_name,"with a profile",restraunt_1.get_close_recomendation(jordan.get_Profile_Features()))
+
+#print("profile" , pf)
+
 
 
 

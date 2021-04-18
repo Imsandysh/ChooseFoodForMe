@@ -22,7 +22,7 @@ class Feature_Data_Struct(Saveable):
         list_features.remove(feat)
         self.feature_count = len(self.list_features)
         
-    def Get_Feat_idx(self,idx):
+    def get_feat_idx(self,idx):
         return self.list_features[idx]
         
     def __eq__(self,other):

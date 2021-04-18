@@ -20,5 +20,8 @@ class Profile(Saveable):
     def edit_feature_struct(self,pf):
         self.pf = pf
         
+    def get_Profile_Features(self):
+        return self.pf
+        
     def get_data(self):
         return self.user_name+";" + self.pf.get_data_feat() + self.pf.get_data_quiz()
