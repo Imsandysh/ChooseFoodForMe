@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  Welcome, {{ name }}!
+</h1>
+<h2>
+  Select ingredients that you like
+</h2>
+<div class="tile is-ancestor">
+    <div class="tile is-parent">
+      <article class="tile is-child notification is-danger">
+        <p class="title">Protein</p>
+        <div class="content">
+            <button class="button is-dark">Chicken</button>
+            <button class="button is-dark">Beef</button>
+            <button class="button is-dark">Lamb</button>
+            <button class="button is-dark">Shrimp</button>
+        </div>
+        <div class="content">
+            <button class="button is-dark">Eggs</button>
+            <button class="button is-dark">Fish</button>
+            <button class="button is-dark">Turkey</button>
+            <button class="button is-dark">Beans</button>
+        </div>
+      </article>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child notification is-danger">
+        <p class="title">Carbs</p>
+        <div class="content">
+            <button class="button is-dark">Rice</button>
+            <button class="button is-dark">Potato</button>
+            <button class="button is-dark">Bread</button>
+            <button class="button is-dark">Corn</button>
+        </div>
+      </article>
+    </div>
+</div>
+
+{% endblock %}
