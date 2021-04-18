@@ -29,5 +29,7 @@ class Profile_Features(Feature_Data_Struct):
         out = out + str(self.quiz)
         out = out +  "question_count " + str( self.get_question_count()) + "\n"
         return out + "feature_count " + str( self.get_feature_count())
-        
+    
+    def get_data_quiz(self):
+        return self.quiz.get_data()
     
