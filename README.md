@@ -18,3 +18,6 @@ A web application that recommends you food from the menu
 2. Back end: Menu is scanned to get the list of food in there. Based on prefences and similarity with other food users have liked, new food is recommended from the menu.
 
 
+# Front End:
+![image](https://user-images.githubusercontent.com/35186843/115147907-2cc3cf00-a02b-11eb-9ad3-fa0094bd1933.png)
+
